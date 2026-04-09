@@ -19,8 +19,8 @@ export default async function AdminPage() {
               Publicação rápida com foco em teste e entrega.
             </h1>
             <p className="mt-5 max-w-3xl text-base leading-8 text-slate-600 md:text-lg">
-              Use este painel para transformar uma execução de campo em peça comercial: descreva a
-              frente, organize as fotos e publique a leitura técnica do serviço.
+              Use este painel para transformar uma execução de campo em apresentação técnica:
+              descreva a frente, organize as fotos e publique a leitura técnica do serviço.
             </p>
           </div>
 

@@ -44,7 +44,7 @@ export function ContactCtaSection() {
           </div>
 
           <div className="mt-6 rounded-2xl border border-[#173349]/10 bg-white/70 px-5 py-4 text-sm leading-7 text-slate-700">
-            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-slate-500">Contato comercial</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-slate-500">Contato técnico</p>
             <a href={`mailto:${commercialEmail}`} className="mt-2 inline-flex font-semibold text-[#0b2538] transition hover:text-[#7b5b00]">
               {commercialEmail}
             </a>
@@ -78,7 +78,7 @@ export function ContactCtaSection() {
             <div className="flex items-start gap-3">
               <FileText className="mt-1 h-5 w-5 text-[#f2b705]" />
               <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#f2b705]">Mensagem principal</p>
+                <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#f2b705]">Síntese técnica</p>
                 <p className="mt-3 text-sm leading-7 text-slate-300">
                   Atuamos com integridade, montagem, teste e comissionamento para indústrias que não
                   podem operar com improviso. A página precisa comunicar isso com clareza.

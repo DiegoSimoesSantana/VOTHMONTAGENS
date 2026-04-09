@@ -69,7 +69,7 @@ export default async function PortfolioPage({
               <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#f2b705]">Filtros de atuação</p>
               <p className="mt-2 max-w-2xl text-sm leading-7 text-slate-300">
                 Navegue por categoria para destacar a especialidade mais relevante para a proposta ou
-                para a visita comercial em andamento.
+                para a apresentação técnica em andamento.
               </p>
             </div>
             <TimelineFilters categoriaAtual={categoria} />

@@ -27,7 +27,7 @@ export function TimelineList({ projetos }: { projetos: Projeto[] }) {
         </h2>
         <p className="mx-auto mt-4 max-w-2xl text-sm leading-7 text-slate-600">
           Quando as obras forem cadastradas com fotos, datas e descrição curta, esta timeline passa a
-          funcionar como apresentação comercial contínua da empresa.
+          funcionar como apresentação técnica contínua da empresa.
         </p>
       </div>
     );

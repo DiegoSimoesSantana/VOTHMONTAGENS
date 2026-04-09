@@ -50,7 +50,7 @@ export const fallbackGallery = [
   },
   {
     title: "Inspeção, teste e comissionamento",
-    label: "Autoridade técnica",
+    label: "Referência técnica",
     text: "Projetos conduzidos com leitura visual da obra, critério de integridade e narrativa clara de validação operacional.",
     image:
       "https://images.unsplash.com/photo-1581092335397-9583eb92d232?auto=format&fit=crop&w=1200&q=80",
@@ -91,8 +91,8 @@ export const proofPillars = [
     text: "Normas, disciplina de campo e leitura de risco precisam aparecer como valor central da marca.",
   },
   {
-    title: "Prova social visual",
-    text: "Cada imagem de montagem, inspeção e teste encurta a distância entre interesse e contato comercial.",
+    title: "Referência visual",
+    text: "Cada imagem de montagem, inspeção e teste reforça contexto, método e evidência de execução.",
   },
 ] as const;
 

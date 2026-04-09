@@ -18,7 +18,7 @@ export function SiteFooter() {
             em autoridade de engenharia, segurança operacional e leitura clara de campo.
           </p>
           <a href={whatsappHref} target="_blank" rel="noreferrer" className="inline-flex text-sm font-semibold uppercase tracking-[0.18em] text-[#f2b705] transition hover:text-white">
-            WhatsApp comercial
+            WhatsApp técnico
           </a>
           <a href={`mailto:${commercialEmail}`} className="block text-sm text-slate-300 transition hover:text-white">
             {commercialEmail}

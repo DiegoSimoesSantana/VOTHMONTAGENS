@@ -125,7 +125,7 @@ export default async function ProjetoDetalhePage({
             </div>
 
             <div className="rounded-[1.5rem] border border-[#173349]/10 bg-white/80 p-6">
-              <p className="text-xs font-semibold uppercase tracking-[0.28em] text-slate-500">Leitura comercial</p>
+              <p className="text-xs font-semibold uppercase tracking-[0.28em] text-slate-500">Leitura técnica</p>
               <p className="mt-3 text-sm leading-7 text-slate-600">
                 A base original desta página funciona melhor como estudo técnico curto: contexto,
                 resumo operacional e suporte visual suficiente para uma proposta ou visita técnica.
@@ -211,7 +211,7 @@ export default async function ProjetoDetalhePage({
           },
         ].map((item) => (
           <article key={item.title} className="section-shell rounded-[1.5rem] p-6">
-            <p className="text-xs font-semibold uppercase tracking-[0.28em] text-slate-500">Leitura comercial</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.28em] text-slate-500">Leitura técnica</p>
             <h3 className="mt-4 font-display text-3xl uppercase leading-none text-[#0b2538]">{item.title}</h3>
             <p className="mt-4 text-sm leading-7 text-slate-600">{item.text}</p>
           </article>
