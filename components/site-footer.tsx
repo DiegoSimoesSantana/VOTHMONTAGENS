@@ -1,9 +1,10 @@
 import Link from "next/link";
+import { whatsappHref } from "@/lib/site-content";
 
 const footerLinks = [
-  { href: "/", label: "Empresa" },
+  { href: "/#especialidades", label: "Especialidades" },
   { href: "/portfolio", label: "Portfólio" },
-  { href: "/admin/login", label: "Área Admin" },
+  { href: "/#contato", label: "Contato" },
 ];
 
 export function SiteFooter() {
@@ -13,9 +14,12 @@ export function SiteFooter() {
         <div className="space-y-4">
           <p className="font-display text-3xl uppercase tracking-[0.16em]">VOTH</p>
           <p className="max-w-xl text-sm leading-7 text-slate-300">
-            Apresentação técnica de obras, montagens, interligações e manutenção industrial com
-            foco em execução rastreável, segurança operacional e leitura clara de campo.
+            Apresentação técnica de obras, testes, comissionamento e montagem industrial com foco
+            em autoridade de engenharia, segurança operacional e leitura clara de campo.
           </p>
+          <a href={whatsappHref} target="_blank" rel="noreferrer" className="inline-flex text-sm font-semibold uppercase tracking-[0.18em] text-[#f2b705] transition hover:text-white">
+            WhatsApp comercial
+          </a>
         </div>
 
         <div>

@@ -1,11 +1,12 @@
 import Link from "next/link";
 import { buttonVariants } from "@/components/ui/button";
+import { whatsappHref } from "@/lib/site-content";
 import { cn } from "@/lib/utils";
 
 const navItems = [
-  { href: "/", label: "Empresa" },
+  { href: "/#especialidades", label: "Especialidades" },
   { href: "/portfolio", label: "Portfólio" },
-  { href: "/admin/login", label: "Área Admin" },
+  { href: "/#contato", label: "Contato" },
 ];
 
 export function SiteHeader() {
@@ -38,12 +39,14 @@ export function SiteHeader() {
           ))}
         </nav>
 
-        <Link
-          href="/portfolio"
+        <a
+          href={whatsappHref}
+          target="_blank"
+          rel="noreferrer"
           className={cn(buttonVariants({ variant: "accent", size: "sm" }), "rounded-full px-5")}
         >
-          Ver evidências
-        </Link>
+          Falar com um engenheiro
+        </a>
       </div>
     </header>
   );

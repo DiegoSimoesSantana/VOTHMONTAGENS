@@ -2,8 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Factory, ShieldCheck, Wrench, Workflow } from "lucide-react";
 import { listarProjetos } from "@/app/actions/projetos";
+import { ContactCtaSection } from "@/components/marketing/contact-cta-section";
+import { ServicesSection } from "@/components/marketing/services-section";
 import { Badge } from "@/components/ui/badge";
 import { buttonVariants } from "@/components/ui/button";
+import { fallbackGallery, whatsappHref } from "@/lib/site-content";
 import { cn, mesAno } from "@/lib/utils";
 
 const capabilityCards = [
@@ -29,24 +32,6 @@ const processSteps = [
   "Montagem, adequações e preparação para teste hidrostático ou partida assistida.",
   "Pressurização, estabilização, checagem de integridade e acompanhamento operacional.",
   "Comissionamento e entrega com sistema liberado para o resultado esperado pelo cliente.",
-];
-
-const fallbackGallery = [
-  {
-    title: "Tanques verticais e plataforma de operação",
-    label: "Drone overview",
-    text: "Implantação de reservatórios, preparação do sistema e organização da área para etapas de teste e entrega operacional.",
-  },
-  {
-    title: "Tubulação técnica, válvulas e pontos de teste",
-    label: "Comissionamento",
-    text: "Soldagem, interligações e configuração de linhas para garantir integridade e liberação controlada do sistema.",
-  },
-  {
-    title: "Infraestrutura enterrada e travessias",
-    label: "Rede industrial",
-    text: "Abertura de vala, encaminhamento de linhas e adequação do sistema para continuidade operacional e testes finais.",
-  },
 ];
 
 const resultPillars = [
@@ -88,17 +73,16 @@ export default async function Home() {
           </div>
 
           <div className="mt-10 flex flex-wrap gap-3">
-            <Link
-              href="/portfolio"
+            <a
+              href={whatsappHref}
+              target="_blank"
+              rel="noreferrer"
               className={cn(buttonVariants({ variant: "accent", size: "lg" }), "rounded-full px-7")}
             >
-              Ver portfólio <ArrowRight className="ml-2 h-4 w-4" />
-            </Link>
-            <Link
-              href="/admin/novo-projeto"
-              className={cn(buttonVariants({ variant: "outline", size: "lg" }), "rounded-full px-7")}
-            >
-              Atualizar obras
+              Falar com um engenheiro <ArrowRight className="ml-2 h-4 w-4" />
+            </a>
+            <Link href="/portfolio" className={cn(buttonVariants({ variant: "outline", size: "lg" }), "rounded-full px-7")}>
+              Ver portfólio
             </Link>
           </div>
 
@@ -163,6 +147,8 @@ export default async function Home() {
         </div>
       </section>
 
+      <ServicesSection />
+
       <section className="mx-auto max-w-7xl px-6 pb-10">
         <div className="grid gap-5 md:grid-cols-3">
           {resultPillars.map((item) => (
@@ -223,12 +209,21 @@ export default async function Home() {
               ))
             : fallbackGallery.map((item) => (
                 <article key={item.title} className="section-shell rounded-[1.75rem] p-5">
-                  <div className="flex h-72 items-end rounded-[1.25rem] bg-[linear-gradient(160deg,#0b2538_0%,#24445d_52%,#f2b705_180%)] p-6 text-[#f3f0e8]">
-                    <div>
-                      <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#f2b705]">
-                        {item.label}
-                      </p>
-                      <p className="mt-3 font-display text-4xl uppercase leading-none">{item.title}</p>
+                  <div className="relative h-72 overflow-hidden rounded-[1.25rem] bg-[#dbe2e7]">
+                    <Image
+                      src={item.image}
+                      alt={item.title}
+                      fill
+                      sizes="(min-width: 768px) 33vw, 100vw"
+                      className="object-cover"
+                    />
+                    <div className="absolute inset-0 flex items-end bg-gradient-to-t from-[#07131d] via-[#07131d]/20 to-transparent p-6 text-[#f3f0e8]">
+                      <div>
+                        <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#f2b705]">
+                          {item.label}
+                        </p>
+                        <p className="mt-3 font-display text-4xl uppercase leading-none">{item.title}</p>
+                      </div>
                     </div>
                   </div>
                   <p className="mt-4 px-2 text-sm leading-7 text-slate-600">{item.text}</p>
@@ -292,6 +287,8 @@ export default async function Home() {
           </div>
         </div>
       </section>
+
+      <ContactCtaSection />
     </main>
   );
 }
