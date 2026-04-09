@@ -10,10 +10,10 @@ export function ContactCtaSection() {
       <div className="grid gap-6 md:grid-cols-[1.1fr_0.9fr]">
         <div className="section-shell rounded-[2rem] p-8 md:p-10">
           <span className="eyebrow">Contato técnico</span>
-          <h2 className="mt-5 font-display text-5xl uppercase leading-[0.92] text-[#0b2538] md:text-6xl">
+          <h2 className="title-balance mt-5 max-w-[12ch] font-display text-5xl uppercase leading-[0.9] text-[#0b2538] md:text-6xl">
             Fale com um engenheiro e apresente a demanda para análise técnica.
           </h2>
-          <p className="mt-5 max-w-2xl text-sm leading-7 text-slate-600">
+          <p className="copy-measure mt-5 max-w-2xl text-sm leading-7 text-slate-600">
             Este fechamento reúne especialidades, histórico de obras, normas atendidas e um canal direto
             para seguir a conversa com contexto técnico.
           </p>

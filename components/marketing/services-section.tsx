@@ -9,7 +9,7 @@ export function ServicesSection() {
         <div className="mb-8 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
           <div>
             <span className="eyebrow text-slate-300 before:bg-slate-500">Nossas especialidades</span>
-            <h2 className="mt-4 max-w-4xl font-display text-5xl uppercase leading-[0.92] md:text-6xl">
+            <h2 className="title-balance mt-4 max-w-4xl font-display text-5xl uppercase leading-[0.9] md:text-6xl">
               Frentes de atuação organizadas por processo e especialidade.
             </h2>
           </div>
@@ -41,7 +41,7 @@ export function ServicesSection() {
               </div>
 
               <div className="space-y-4 p-6">
-                <h3 className="font-display text-4xl uppercase leading-[0.9] text-white">{service.title}</h3>
+                <h3 className="title-balance font-display text-4xl uppercase leading-[0.9] text-white">{service.title}</h3>
                 <p className="text-sm leading-7 text-slate-300">{service.description}</p>
                 <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#f6cd45]">Abrir casos relacionados</p>
               </div>

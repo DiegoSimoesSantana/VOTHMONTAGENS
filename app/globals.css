@@ -56,6 +56,14 @@ body::before {
   box-shadow: 0 20px 60px rgba(11, 37, 56, 0.08);
 }
 
+.section-shell::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.22), transparent 28%);
+}
+
 .eyebrow {
   display: inline-flex;
   align-items: center;
@@ -72,4 +80,12 @@ body::before {
   height: 1px;
   width: 3rem;
   background: rgba(11, 37, 56, 0.26);
+}
+
+.title-balance {
+  text-wrap: balance;
+}
+
+.copy-measure {
+  max-width: 62ch;
 }

@@ -63,10 +63,10 @@ export default async function Home() {
             <Badge variant="accent" className="rounded-full px-4 py-1 text-[11px] uppercase tracking-[0.24em]">
               Empresa de teste hidrostático, comissionamento e manutenção industrial
             </Badge>
-            <h1 className="max-w-4xl font-display text-6xl uppercase leading-[0.9] tracking-[0.04em] text-[#0b2538] md:text-8xl">
+            <h1 className="title-balance max-w-4xl font-display text-6xl uppercase leading-[0.88] tracking-[0.03em] text-[#0b2538] md:text-8xl">
               Teste, liberação e entrega operacional com leitura de campo.
             </h1>
-            <p className="max-w-2xl text-lg leading-8 text-slate-600 md:text-xl">
+            <p className="copy-measure max-w-2xl text-lg leading-8 text-slate-600 md:text-xl">
               A VOTH atua com teste hidrostático e comissionamento em sistemas industriais,
               adutoras, aquedutos, caixas d&apos;água, linhas de utilidades e ativos sob requisitos de NR-13.
             </p>
@@ -124,7 +124,7 @@ export default async function Home() {
                   <p className="text-xs font-semibold uppercase tracking-[0.28em] text-slate-500">
                     Frente {String(index + 1).padStart(2, "0")}
                   </p>
-                  <p className="mt-3 font-display text-3xl uppercase leading-none text-[#0b2538]">
+                  <p className="title-balance mt-3 max-w-[15ch] font-display text-3xl uppercase leading-[0.94] text-[#0b2538]">
                     {item}
                   </p>
                 </div>
@@ -140,7 +140,7 @@ export default async function Home() {
           {capabilityCards.map(({ title, text, icon: Icon }) => (
             <article key={title} className="section-shell rounded-[1.75rem] p-7">
               <Icon className="h-8 w-8 text-[#0b2538]" />
-              <h2 className="mt-6 font-display text-4xl uppercase leading-none text-[#0b2538]">{title}</h2>
+              <h2 className="title-balance mt-6 font-display text-4xl uppercase leading-[0.94] text-[#0b2538]">{title}</h2>
               <p className="mt-4 text-sm leading-7 text-slate-600">{text}</p>
             </article>
           ))}
@@ -165,7 +165,7 @@ export default async function Home() {
         <div className="mb-8 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
           <div>
             <span className="eyebrow">Leitura de campo</span>
-            <h2 className="mt-4 font-display text-5xl uppercase leading-none text-[#0b2538] md:text-6xl">
+            <h2 className="title-balance mt-4 max-w-[12ch] font-display text-5xl uppercase leading-[0.92] text-[#0b2538] md:text-6xl">
               Projetos e evidências de campo.
             </h2>
           </div>
@@ -197,7 +197,7 @@ export default async function Home() {
                     <p className="text-xs font-semibold uppercase tracking-[0.28em] text-slate-500">
                       {mesAno(projeto.dataExecucao)}
                     </p>
-                    <h3 className="font-display text-4xl uppercase leading-none text-[#0b2538]">
+                    <h3 className="title-balance font-display text-4xl uppercase leading-[0.92] text-[#0b2538]">
                       {projeto.titulo}
                     </h3>
                     <p className="text-sm leading-7 text-slate-600">
@@ -221,7 +221,7 @@ export default async function Home() {
                         <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#f2b705]">
                           {item.label}
                         </p>
-                        <p className="mt-3 font-display text-4xl uppercase leading-none">{item.title}</p>
+                        <p className="title-balance mt-3 max-w-[12ch] font-display text-4xl uppercase leading-[0.92]">{item.title}</p>
                       </div>
                     </div>
                   </div>
@@ -235,7 +235,7 @@ export default async function Home() {
         <div className="grid gap-5 md:grid-cols-[0.9fr_1.1fr]">
           <div className="section-shell rounded-[2rem] p-8 md:p-10">
             <span className="eyebrow">Método VOTH</span>
-            <h2 className="mt-5 font-display text-5xl uppercase leading-none text-[#0b2538] md:text-6xl">
+            <h2 className="title-balance mt-5 max-w-[12ch] font-display text-5xl uppercase leading-[0.92] text-[#0b2538] md:text-6xl">
               Janelas internas da entrega, do teste à liberação.
             </h2>
             <p className="mt-5 max-w-xl text-sm leading-7 text-slate-600">
@@ -267,7 +267,7 @@ export default async function Home() {
           <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
             <div>
               <span className="eyebrow text-slate-300 before:bg-slate-500">Próximo passo</span>
-              <h2 className="mt-4 font-display text-5xl uppercase leading-none md:text-6xl">
+              <h2 className="title-balance mt-4 max-w-[12ch] font-display text-5xl uppercase leading-[0.92] md:text-6xl">
                 Avaliar a demanda com base técnica e histórico de execução.
               </h2>
             </div>

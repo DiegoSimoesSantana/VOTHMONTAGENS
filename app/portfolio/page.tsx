@@ -25,10 +25,10 @@ export default async function PortfolioPage({
         <div className="grid gap-8 md:grid-cols-[1.1fr_0.9fr]">
           <div className="space-y-5">
             <span className="eyebrow">Portfólio técnico VOTH</span>
-            <h1 className="font-display text-6xl uppercase leading-[0.9] tracking-[0.04em] text-[#0b2538] md:text-8xl">
+            <h1 className="title-balance max-w-[12ch] font-display text-6xl uppercase leading-[0.88] tracking-[0.03em] text-[#0b2538] md:text-8xl">
               Teste hidrostático, comissionamento e execução apresentados por evidência.
             </h1>
-            <p className="max-w-3xl text-base leading-8 text-slate-600 md:text-lg">
+            <p className="copy-measure max-w-3xl text-base leading-8 text-slate-600 md:text-lg">
               Esta timeline organiza a atuação da VOTH a partir do que mais importa para o cliente:
               preparação do sistema, janelas internas da execução, teste, comissionamento e liberação
               operacional. O foco vale para redes industriais, adutoras, aquedutos, caixas d&apos;água e
@@ -56,7 +56,7 @@ export default async function PortfolioPage({
             ].map(({ title, text, icon: Icon }) => (
               <div key={title} className="rounded-[1.5rem] border border-[#173349]/10 bg-white/80 p-5">
                 <Icon className="h-7 w-7 text-[#0b2538]" />
-                <p className="mt-4 font-display text-3xl uppercase leading-none text-[#0b2538]">{title}</p>
+                <p className="title-balance mt-4 font-display text-3xl uppercase leading-[0.94] text-[#0b2538]">{title}</p>
                 <p className="mt-3 text-sm leading-7 text-slate-600">{text}</p>
               </div>
             ))}
@@ -93,7 +93,7 @@ export default async function PortfolioPage({
           ].map((item) => (
             <div key={item.title} className="rounded-[1.5rem] border border-[#173349]/10 bg-white/75 p-5">
               <p className="text-xs font-semibold uppercase tracking-[0.28em] text-slate-500">Janela interna</p>
-              <p className="mt-3 font-display text-3xl uppercase leading-none text-[#0b2538]">{item.title}</p>
+              <p className="title-balance mt-3 font-display text-3xl uppercase leading-[0.94] text-[#0b2538]">{item.title}</p>
               <p className="mt-3 text-sm leading-7 text-slate-600">{item.text}</p>
             </div>
           ))}

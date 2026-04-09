@@ -96,10 +96,10 @@ export default async function ProjetoDetalhePage({
                 {projeto.cliente}
               </Badge>
             </div>
-            <h1 className="font-display text-6xl uppercase leading-[0.9] tracking-[0.04em] text-[#0b2538] md:text-8xl">
+            <h1 className="title-balance max-w-[13ch] font-display text-6xl uppercase leading-[0.88] tracking-[0.03em] text-[#0b2538] md:text-8xl">
               {projeto.titulo}
             </h1>
-            <p className="max-w-3xl text-base leading-8 text-slate-600 md:text-lg">
+            <p className="copy-measure max-w-3xl text-base leading-8 text-slate-600 md:text-lg">
               {projeto.descricaoCurta ||
                 "Projeto apresentado com foco em contexto operacional, teste, comissionamento, sequência de execução e evidência visual."}
             </p>
@@ -161,7 +161,7 @@ export default async function ProjetoDetalhePage({
               <div className="absolute inset-0 bg-gradient-to-t from-[#07131d]/75 via-[#07131d]/10 to-transparent" />
               <div className="absolute inset-x-0 bottom-0 p-5 text-[#f3f0e8]">
                 <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#f2b705]">Referência visual do processo</p>
-                <p className="mt-2 font-display text-3xl uppercase leading-none">{categoriaLabel(projeto.categoria)}</p>
+                <p className="title-balance mt-2 font-display text-3xl uppercase leading-[0.94]">{categoriaLabel(projeto.categoria)}</p>
               </div>
             </div>
           </article>
@@ -171,7 +171,7 @@ export default async function ProjetoDetalhePage({
       <section className="grid gap-6 md:grid-cols-[1.15fr_0.85fr]">
         <article className="section-shell rounded-[1.75rem] p-7 md:p-8">
           <p className="text-xs font-semibold uppercase tracking-[0.28em] text-slate-500">Descrição técnica</p>
-          <h2 className="mt-4 font-display text-4xl uppercase leading-none text-[#0b2538] md:text-5xl">
+          <h2 className="title-balance mt-4 font-display text-4xl uppercase leading-[0.94] text-[#0b2538] md:text-5xl">
             Contexto e execução
           </h2>
           <p className="mt-5 whitespace-pre-line text-sm leading-8 text-slate-700">
@@ -182,7 +182,7 @@ export default async function ProjetoDetalhePage({
 
         <article className="section-shell rounded-[1.75rem] p-7 md:p-8">
           <p className="text-xs font-semibold uppercase tracking-[0.28em] text-slate-500">Linha técnica do serviço</p>
-          <h2 className="mt-4 font-display text-4xl uppercase leading-none text-[#0b2538] md:text-5xl">
+          <h2 className="title-balance mt-4 font-display text-4xl uppercase leading-[0.94] text-[#0b2538] md:text-5xl">
             Frentes observadas
           </h2>
           <ul className="mt-5 space-y-4 text-sm leading-7 text-slate-700">
@@ -212,7 +212,7 @@ export default async function ProjetoDetalhePage({
         ].map((item) => (
           <article key={item.title} className="section-shell rounded-[1.5rem] p-6">
             <p className="text-xs font-semibold uppercase tracking-[0.28em] text-slate-500">Leitura técnica</p>
-            <h3 className="mt-4 font-display text-3xl uppercase leading-none text-[#0b2538]">{item.title}</h3>
+            <h3 className="title-balance mt-4 font-display text-3xl uppercase leading-[0.94] text-[#0b2538]">{item.title}</h3>
             <p className="mt-4 text-sm leading-7 text-slate-600">{item.text}</p>
           </article>
         ))}
