@@ -9,13 +9,13 @@ export function ContactCtaSection() {
     <section id="contato" className="mx-auto max-w-7xl px-6 pb-20">
       <div className="grid gap-6 md:grid-cols-[1.1fr_0.9fr]">
         <div className="section-shell rounded-[2rem] p-8 md:p-10">
-          <span className="eyebrow">Fechamento do funil</span>
+          <span className="eyebrow">Contato técnico</span>
           <h2 className="mt-5 font-display text-5xl uppercase leading-[0.92] text-[#0b2538] md:text-6xl">
-            Fale com um engenheiro e avance para a próxima análise técnica.
+            Fale com um engenheiro e apresente a demanda para análise técnica.
           </h2>
           <p className="mt-5 max-w-2xl text-sm leading-7 text-slate-600">
-            O comprador técnico converte por confiança. Por isso o fechamento da home precisa unir
-            especialidade, histórico de obras, normas atendidas e um CTA direto para conversa.
+            Este fechamento reúne especialidade, histórico de obras, normas atendidas e um canal direto
+            para continuar a conversa com contexto técnico.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-3">
@@ -57,8 +57,8 @@ export function ContactCtaSection() {
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#f2b705]">Segurança e conformidade</p>
               <p className="mt-3 text-sm leading-7 text-slate-300">
-                O site precisa encerrar reforçando que a VOTH atua com disciplina operacional,
-                inspeção, integridade, documentação e foco na liberação segura do sistema.
+                A apresentação se encerra reforçando disciplina operacional, inspeção,
+                integridade, documentação e foco na liberação segura do sistema.
               </p>
             </div>
           </div>
@@ -80,8 +80,8 @@ export function ContactCtaSection() {
               <div>
                 <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#f2b705]">Mensagem principal</p>
                 <p className="mt-3 text-sm leading-7 text-slate-300">
-                  Garantimos integridade, montagem, teste e comissionamento para indústrias que não
-                  podem operar com improviso. A página precisa vender exatamente isso.
+                  Atuamos com integridade, montagem, teste e comissionamento para indústrias que não
+                  podem operar com improviso. A página precisa comunicar isso com clareza.
                 </p>
               </div>
             </div>

@@ -6,13 +6,13 @@ export function SocialProofSection() {
       <div className="section-shell rounded-[2rem] p-8 md:p-12">
         <div className="flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
           <div>
-            <span className="eyebrow">Prova social e autoridade</span>
+            <span className="eyebrow">Referências e autoridade</span>
             <h2 className="mt-4 max-w-4xl font-display text-5xl uppercase leading-[0.92] text-[#0b2538] md:text-6xl">
-              O comprador industrial converte por segurança, histórico e evidência técnica.
+              Histórico técnico, normas e frentes de atuação apresentadas com clareza.
             </h2>
           </div>
           <p className="max-w-2xl text-sm leading-7 text-slate-600">
-            Esta seção fecha a lógica do funil B2B: reforça experiência, mostra diferenciais e deixa claro que a VOTH atua com rigor técnico em ambientes que não toleram improviso.
+            Esta seção reforça experiência, diferenciais e contexto de atuação sem desviar da leitura principal do site: execução industrial com rigor técnico.
           </p>
         </div>
 

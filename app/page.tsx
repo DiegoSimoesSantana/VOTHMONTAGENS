@@ -45,8 +45,8 @@ const resultPillars = [
     text: "O comissionamento fecha o ciclo da obra e prepara a operação para entrar em serviço.",
   },
   {
-    title: "Evidência comercial",
-    text: "As imagens e o texto técnico viram argumento real para proposta, visita e negociação.",
+    title: "Evidência técnica",
+    text: "As imagens e o texto técnico documentam a frente executada e apoiam a apresentação do escopo.",
   },
 ];
 
@@ -167,13 +167,13 @@ export default async function Home() {
           <div>
             <span className="eyebrow">Leitura de campo</span>
             <h2 className="mt-4 font-display text-5xl uppercase leading-none text-[#0b2538] md:text-6xl">
-              Portfólio pensado para vender competência.
+              Projetos e evidências de campo.
             </h2>
           </div>
           <p className="max-w-2xl text-sm leading-7 text-slate-600">
-            O conjunto de imagens agora sustenta uma mensagem mais precisa: a empresa executa,
-            testa, comissiona e entrega sistemas industriais com leitura técnica, segurança e prova
-            visual da frente em andamento, inclusive em reservatórios e caixas d&apos;água.
+            O conjunto de imagens sustenta a leitura técnica da empresa: execução, teste,
+            comissionamento e entrega de sistemas industriais com registro visual da frente em andamento,
+            inclusive em reservatórios e caixas d&apos;água.
           </p>
         </div>
 
@@ -241,8 +241,8 @@ export default async function Home() {
               Janelas internas da entrega, do teste à liberação.
             </h2>
             <p className="mt-5 max-w-xl text-sm leading-7 text-slate-600">
-              A abertura da apresentação agora explica melhor como a empresa lê o sistema, atua nas
-              etapas internas da execução e entrega o ativo em condição de operação.
+              A apresentação explica como a empresa lê o sistema, atua nas etapas internas da execução
+              e entrega o ativo em condição de operação.
             </p>
           </div>
 
@@ -270,12 +270,12 @@ export default async function Home() {
             <div>
               <span className="eyebrow text-slate-300 before:bg-slate-500">Próximo passo</span>
               <h2 className="mt-4 font-display text-5xl uppercase leading-none md:text-6xl">
-                Transformar teste e comissionamento em argumento comercial.
+                Avaliar a demanda com base técnica e histórico de execução.
               </h2>
             </div>
             <div className="max-w-xl space-y-5 text-sm leading-7 text-slate-300">
               <p>
-                A base pública passa a abrir com a mensagem certa: empresa preparada para testar,
+                A base pública apresenta a empresa como ela precisa ser lida: preparada para testar,
                 comissionar, ajustar e liberar sistemas industriais com rastreabilidade visual.
               </p>
               <Link
