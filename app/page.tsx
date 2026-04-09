@@ -4,6 +4,7 @@ import { ArrowRight, Factory, ShieldCheck, Wrench, Workflow } from "lucide-react
 import { listarProjetos } from "@/app/actions/projetos";
 import { ContactCtaSection } from "@/components/marketing/contact-cta-section";
 import { ServicesSection } from "@/components/marketing/services-section";
+import { SocialProofSection } from "@/components/marketing/social-proof-section";
 import { Badge } from "@/components/ui/badge";
 import { buttonVariants } from "@/components/ui/button";
 import { fallbackGallery, whatsappHref } from "@/lib/site-content";
@@ -287,6 +288,8 @@ export default async function Home() {
           </div>
         </div>
       </section>
+
+      <SocialProofSection />
 
       <ContactCtaSection />
     </main>

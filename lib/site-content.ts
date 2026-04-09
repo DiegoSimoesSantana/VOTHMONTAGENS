@@ -1,4 +1,5 @@
-export const whatsappHref = "https://wa.me/5571988068222?text=Ol%C3%A1%2C%20quero%20falar%20com%20um%20engenheiro%20da%20VOTH%20sobre%20uma%20demanda%20industrial.";
+export const whatsappHref = "https://wa.me/5527997559365?text=Ol%C3%A1%2C%20quero%20falar%20com%20um%20engenheiro%20da%20VOTH%20sobre%20uma%20demanda%20industrial.";
+export const commercialEmail = "gilberto.visentin@vothmontagem.com.br";
 
 export const services = [
   {
@@ -6,7 +7,7 @@ export const services = [
     description:
       "Fabricação, montagem e adequação de tubulações, flanges, suportes, vasos e estruturas metálicas em campo.",
     image:
-      "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1532619187608-e5375cab36aa?auto=format&fit=crop&w=1200&q=80",
     badge: "Montagem",
     href: "/portfolio?categoria=montagem",
   },
@@ -15,7 +16,7 @@ export const services = [
     description:
       "Leitura de integridade, inspeção em ativos pressurizados e suporte técnico para ambientes com requisitos críticos de segurança.",
     image:
-      "https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1581092919535-7146ff1a5908?auto=format&fit=crop&w=1200&q=80",
     badge: "Integridade",
     href: "/portfolio?categoria=inspecao",
   },
@@ -24,7 +25,7 @@ export const services = [
     description:
       "Preparação da linha, pressurização, estabilização e validação da estanqueidade com abordagem de engenharia e rastreabilidade.",
     image:
-      "https://images.unsplash.com/photo-1513828583688-c52646db42da?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1563453392212-326f5e854473?auto=format&fit=crop&w=1200&q=80",
     badge: "Testes",
     href: "/portfolio?categoria=teste-hidrostatico",
   },
@@ -33,7 +34,7 @@ export const services = [
     description:
       "Execução de malhas, descidas, interligações e pontos de aterramento para proteção de estruturas e ativos industriais.",
     image:
-      "https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1200&q=80",
     badge: "SPDA",
     href: "/portfolio?categoria=spda",
   },
@@ -64,6 +65,61 @@ export const fallbackGallery = [
 ] as const;
 
 export const trustItems = ["NR-13", "END", "SPDA", "Comissionamento", "Teste Hidrostático", "Caldeiraria"] as const;
+
+export const proofStats = [
+  {
+    value: "20 anos",
+    label: "Experiência somada em campo industrial",
+  },
+  {
+    value: "B2B",
+    label: "Atuação pensada para engenharia, manutenção e suprimentos",
+  },
+  {
+    value: "360°",
+    label: "Montagem, teste, inspeção, comissionamento e liberação",
+  },
+] as const;
+
+export const proofPillars = [
+  {
+    title: "Autoridade técnica",
+    text: "O site precisa provar capacidade de execução em ativos críticos, não apenas listar serviços.",
+  },
+  {
+    title: "Segurança operacional",
+    text: "Normas, disciplina de campo e leitura de risco precisam aparecer como valor central da marca.",
+  },
+  {
+    title: "Prova social visual",
+    text: "Cada imagem de montagem, inspeção e teste encurta a distância entre interesse e contato comercial.",
+  },
+] as const;
+
+export const socialLogos = ["NR-13", "END", "Caldeiraria", "Tubulação", "Comissionamento", "SPDA"] as const;
+
+export const processImageMap = {
+  montagem: [
+    "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1200&q=80",
+    "https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1200&q=80",
+  ],
+  manutencao: [
+    "https://images.unsplash.com/photo-1581092583537-20d51b4b4f1b?auto=format&fit=crop&w=1200&q=80",
+    "https://images.unsplash.com/photo-1581092918484-8313b7d0b6f8?auto=format&fit=crop&w=1200&q=80",
+  ],
+  inspecao: [
+    "https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0?auto=format&fit=crop&w=1200&q=80",
+    "https://images.unsplash.com/photo-1581092919535-7146ff1a5908?auto=format&fit=crop&w=1200&q=80",
+  ],
+  "teste-hidrostatico": [
+    "https://images.unsplash.com/photo-1563453392212-326f5e854473?auto=format&fit=crop&w=1200&q=80",
+    "https://images.unsplash.com/photo-1513828583688-c52646db42da?auto=format&fit=crop&w=1200&q=80",
+  ],
+  spda: [
+    "https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?auto=format&fit=crop&w=1200&q=80",
+    "https://images.unsplash.com/photo-1509395176047-4a66953fd231?auto=format&fit=crop&w=1200&q=80",
+  ],
+} as const;
 
 export const segmentItems = [
   "Petroquímica e óleo e gás",

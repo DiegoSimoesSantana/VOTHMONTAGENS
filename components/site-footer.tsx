@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { whatsappHref } from "@/lib/site-content";
+import { commercialEmail, whatsappHref } from "@/lib/site-content";
 
 const footerLinks = [
   { href: "/#especialidades", label: "Especialidades" },
@@ -19,6 +19,9 @@ export function SiteFooter() {
           </p>
           <a href={whatsappHref} target="_blank" rel="noreferrer" className="inline-flex text-sm font-semibold uppercase tracking-[0.18em] text-[#f2b705] transition hover:text-white">
             WhatsApp comercial
+          </a>
+          <a href={`mailto:${commercialEmail}`} className="block text-sm text-slate-300 transition hover:text-white">
+            {commercialEmail}
           </a>
         </div>
 

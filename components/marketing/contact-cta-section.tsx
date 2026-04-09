@@ -2,7 +2,7 @@ import Link from "next/link";
 import { ArrowRight, FileText, ShieldCheck } from "lucide-react";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { segmentItems, trustItems, whatsappHref } from "@/lib/site-content";
+import { commercialEmail, segmentItems, trustItems, whatsappHref } from "@/lib/site-content";
 
 export function ContactCtaSection() {
   return (
@@ -41,6 +41,13 @@ export function ContactCtaSection() {
                 {item}
               </div>
             ))}
+          </div>
+
+          <div className="mt-6 rounded-2xl border border-[#173349]/10 bg-white/70 px-5 py-4 text-sm leading-7 text-slate-700">
+            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-slate-500">Contato comercial</p>
+            <a href={`mailto:${commercialEmail}`} className="mt-2 inline-flex font-semibold text-[#0b2538] transition hover:text-[#7b5b00]">
+              {commercialEmail}
+            </a>
           </div>
         </div>
 
