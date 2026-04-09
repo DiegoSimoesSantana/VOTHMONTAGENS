@@ -147,25 +147,40 @@ export default async function ProjetoDetalhePage({
 
       <ProjectCarousel fotos={projeto.fotos} titulo={projeto.titulo} />
 
-      <section className="grid gap-5 md:grid-cols-2">
-        {supportImages.map((image, index) => (
-          <article key={`${image}-${index}`} className="section-shell rounded-[1.75rem] p-4">
+      <section className="space-y-5">
+        <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.28em] text-slate-500">Etapas internas registradas</p>
+            <h2 className="title-balance mt-2 max-w-3xl font-display text-4xl uppercase leading-[0.94] text-[#0b2538] md:text-5xl">
+              Evidências visuais organizadas conforme a lógica da frente executada.
+            </h2>
+          </div>
+          <p className="copy-measure max-w-2xl text-sm leading-7 text-slate-600">
+            As imagens abaixo funcionam como apoio de leitura para preparação, validação e entrega do processo relacionado a este tipo de serviço.
+          </p>
+        </div>
+
+        <div className="grid gap-5 md:grid-cols-2">
+        {supportImages.map((item, index) => (
+          <article key={`${item.image}-${index}`} className="section-shell rounded-[1.75rem] p-4">
             <div className="relative h-64 overflow-hidden rounded-[1.25rem] bg-[#dbe2e7] md:h-80">
               <Image
-                src={image}
-                alt={`${categoriaLabel(projeto.categoria)} apoio ${index + 1}`}
+                src={item.image}
+                alt={`${categoriaLabel(projeto.categoria)} ${item.title}`}
                 fill
                 sizes="(min-width: 768px) 50vw, 100vw"
                 className="object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#07131d]/75 via-[#07131d]/10 to-transparent" />
               <div className="absolute inset-x-0 bottom-0 p-5 text-[#f3f0e8]">
-                <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#f2b705]">Referência visual do processo</p>
-                <p className="title-balance mt-2 font-display text-3xl uppercase leading-[0.94]">{categoriaLabel(projeto.categoria)}</p>
+                <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#f2b705]">{item.label}</p>
+                <p className="title-balance mt-2 font-display text-3xl uppercase leading-[0.94]">{item.title}</p>
+                <p className="mt-2 max-w-md text-sm leading-6 text-slate-200">{item.text}</p>
               </div>
             </div>
           </article>
         ))}
+        </div>
       </section>
 
       <section className="grid gap-6 md:grid-cols-[1.15fr_0.85fr]">

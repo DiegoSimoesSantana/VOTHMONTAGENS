@@ -53,6 +53,7 @@ const resultPillars = [
 export default async function Home() {
   const projetos = await listarProjetos();
   const destaques = projetos.slice(0, 3);
+  const clientNames = [...new Set(projetos.map((projeto) => projeto.cliente).filter((cliente) => cliente && cliente !== "Não informado"))].slice(0, 12);
 
   return (
     <main>
@@ -287,7 +288,7 @@ export default async function Home() {
         </div>
       </section>
 
-      <SocialProofSection />
+      <SocialProofSection clientNames={clientNames} />
 
       <ContactCtaSection />
     </main>

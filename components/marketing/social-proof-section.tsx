@@ -1,6 +1,6 @@
 import { proofPillars, proofStats, socialLogos } from "@/lib/site-content";
 
-export function SocialProofSection() {
+export function SocialProofSection({ clientNames = [] }: { clientNames?: string[] }) {
   return (
     <section className="mx-auto max-w-7xl px-6 pb-16">
       <div className="section-shell rounded-[2rem] p-8 md:p-12">
@@ -45,6 +45,33 @@ export function SocialProofSection() {
             </span>
           ))}
         </div>
+
+        {clientNames.length ? (
+          <div className="mt-8 rounded-[1.5rem] border border-[#173349]/10 bg-[#0b2538] px-6 py-6 text-[#f3f0e8]">
+            <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#f2b705]">Empresas e operações atendidas</p>
+                <h3 className="title-balance mt-3 max-w-3xl font-display text-4xl uppercase leading-[0.92]">
+                  Referências já registradas no portfólio da operação.
+                </h3>
+              </div>
+              <p className="max-w-2xl text-sm leading-7 text-slate-300">
+                A lista abaixo é construída com base nos projetos publicados e reforça repertório real de atendimento.
+              </p>
+            </div>
+
+            <div className="mt-6 flex flex-wrap gap-2">
+              {clientNames.map((client) => (
+                <span
+                  key={client}
+                  className="rounded-full border border-white/10 bg-white/6 px-4 py-3 text-[11px] font-semibold uppercase tracking-[0.2em] text-slate-100"
+                >
+                  {client}
+                </span>
+              ))}
+            </div>
+          </div>
+        ) : null}
       </div>
     </section>
   );

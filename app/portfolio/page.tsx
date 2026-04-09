@@ -18,6 +18,8 @@ export default async function PortfolioPage({
   searchParams: Promise<{ categoria?: string }>;
 }) {
   const { categoria } = await searchParams;
+  const todosProjetos = await listarProjetos();
+  const clientNames = [...new Set(todosProjetos.map((projeto) => projeto.cliente).filter((cliente) => cliente && cliente !== "Não informado"))].slice(0, 12);
 
   return (
     <main className="mx-auto min-h-screen w-full max-w-7xl px-6 py-10 md:py-14">
@@ -117,6 +119,33 @@ export default async function PortfolioPage({
           </div>
         </div>
       </header>
+
+      {clientNames.length ? (
+        <section className="mt-8 rounded-[1.75rem] bg-[#0b2538] px-6 py-7 text-[#f3f0e8] shadow-[0_18px_48px_rgba(11,37,56,0.16)] md:px-8">
+          <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#f2b705]">Empresas já atendidas</p>
+              <h2 className="title-balance mt-3 max-w-3xl font-display text-4xl uppercase leading-[0.92] md:text-5xl">
+                Referências extraídas diretamente dos projetos publicados.
+              </h2>
+            </div>
+            <p className="max-w-2xl text-sm leading-7 text-slate-300">
+              Isso reforça repertório real de execução e ajuda o comprador B2B a reconhecer contexto e escala de atendimento.
+            </p>
+          </div>
+
+          <div className="mt-5 flex flex-wrap gap-2">
+            {clientNames.map((client) => (
+              <span
+                key={client}
+                className="rounded-full border border-white/10 bg-white/6 px-4 py-3 text-[11px] font-semibold uppercase tracking-[0.2em] text-slate-100"
+              >
+                {client}
+              </span>
+            ))}
+          </div>
+        </section>
+      ) : null}
 
       <section className="mt-8">
         <Suspense fallback={<p className="text-slate-600">Carregando projetos...</p>}>

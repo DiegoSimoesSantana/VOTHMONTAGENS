@@ -100,24 +100,74 @@ export const socialLogos = ["NR-13", "END", "Caldeiraria", "Tubulação", "Comis
 
 export const processImageMap = {
   montagem: [
-    "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1200&q=80",
-    "https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1200&q=80",
+    {
+      image: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1200&q=80",
+      label: "Etapa interna",
+      title: "Preparação e montagem",
+      text: "Leitura da frente, montagem de linhas, suportes e interfaces antes da validação final.",
+    },
+    {
+      image: "https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1200&q=80",
+      label: "Etapa interna",
+      title: "Ajuste e entrega",
+      text: "Organização do conjunto, acabamento e prontidão para inspeção ou operação assistida.",
+    },
   ],
   manutencao: [
-    "https://images.unsplash.com/photo-1581092583537-20d51b4b4f1b?auto=format&fit=crop&w=1200&q=80",
-    "https://images.unsplash.com/photo-1581092918484-8313b7d0b6f8?auto=format&fit=crop&w=1200&q=80",
+    {
+      image: "https://images.unsplash.com/photo-1581092583537-20d51b4b4f1b?auto=format&fit=crop&w=1200&q=80",
+      label: "Etapa interna",
+      title: "Intervenção técnica",
+      text: "Correções, recomposição de trechos críticos e controle do retorno operacional da frente.",
+    },
+    {
+      image: "https://images.unsplash.com/photo-1581092918484-8313b7d0b6f8?auto=format&fit=crop&w=1200&q=80",
+      label: "Etapa interna",
+      title: "Verificação final",
+      text: "Checagens de integridade e fechamento da intervenção com registro da condição entregue.",
+    },
   ],
   inspecao: [
-    "https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0?auto=format&fit=crop&w=1200&q=80",
-    "https://images.unsplash.com/photo-1581092919535-7146ff1a5908?auto=format&fit=crop&w=1200&q=80",
+    {
+      image: "https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0?auto=format&fit=crop&w=1200&q=80",
+      label: "Etapa interna",
+      title: "Levantamento e acesso",
+      text: "Mapeamento visual do ativo, pontos de atenção e condições para decisão técnica.",
+    },
+    {
+      image: "https://images.unsplash.com/photo-1581092919535-7146ff1a5908?auto=format&fit=crop&w=1200&q=80",
+      label: "Etapa interna",
+      title: "Registro e parecer",
+      text: "Consolidação da inspeção com evidência visual e leitura de integridade para o próximo passo.",
+    },
   ],
   "teste-hidrostatico": [
-    "https://images.unsplash.com/photo-1563453392212-326f5e854473?auto=format&fit=crop&w=1200&q=80",
-    "https://images.unsplash.com/photo-1513828583688-c52646db42da?auto=format&fit=crop&w=1200&q=80",
+    {
+      image: "https://images.unsplash.com/photo-1563453392212-326f5e854473?auto=format&fit=crop&w=1200&q=80",
+      label: "Etapa interna",
+      title: "Preparação e pressurização",
+      text: "Isolamento de trechos, preparação da linha e início da validação de estanqueidade.",
+    },
+    {
+      image: "https://images.unsplash.com/photo-1513828583688-c52646db42da?auto=format&fit=crop&w=1200&q=80",
+      label: "Etapa interna",
+      title: "Estabilização e liberação",
+      text: "Acompanhamento do comportamento da rede, estabilização e registro da condição liberada.",
+    },
   ],
   spda: [
-    "https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?auto=format&fit=crop&w=1200&q=80",
-    "https://images.unsplash.com/photo-1509395176047-4a66953fd231?auto=format&fit=crop&w=1200&q=80",
+    {
+      image: "https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?auto=format&fit=crop&w=1200&q=80",
+      label: "Etapa interna",
+      title: "Malha e interligações",
+      text: "Execução de descidas, conexões e distribuição dos pontos de proteção do sistema.",
+    },
+    {
+      image: "https://images.unsplash.com/photo-1509395176047-4a66953fd231?auto=format&fit=crop&w=1200&q=80",
+      label: "Etapa interna",
+      title: "Continuidade e conformidade",
+      text: "Verificação final do aterramento, continuidade e prontidão para inspeção e uso.",
+    },
   ],
 } as const;
 
