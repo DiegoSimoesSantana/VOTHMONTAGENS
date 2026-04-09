@@ -13,7 +13,7 @@ import { cn, mesAno } from "@/lib/utils";
 const capabilityCards = [
   {
     title: "Teste hidrostático e comissionamento",
-    text: "Preparação do sistema, pressurização controlada, validação operacional e liberação final para entrada em serviço.",
+    text: "Preparação do sistema, pressurização controlada, validação operacional e liberação para entrada em serviço.",
     icon: ShieldCheck,
   },
   {
@@ -23,7 +23,7 @@ const capabilityCards = [
   },
   {
     title: "NR-13, manutenção e montagem",
-    text: "Intervenções em vasos, linhas, suportes e conjuntos industriais com leitura técnica e evidência fotográfica.",
+    text: "Intervenções em vasos, linhas, suportes e conjuntos industriais com leitura técnica e registro fotográfico.",
     icon: Factory,
   },
 ];
@@ -42,7 +42,7 @@ const resultPillars = [
   },
   {
     title: "Liberação operacional",
-    text: "O comissionamento fecha o ciclo da obra e prepara a operação para entrar em serviço.",
+    text: "O comissionamento fecha a obra e prepara a operação para entrar em serviço.",
   },
   {
     title: "Evidência técnica",
@@ -64,12 +64,11 @@ export default async function Home() {
               Empresa de teste hidrostático, comissionamento e manutenção industrial
             </Badge>
             <h1 className="max-w-4xl font-display text-6xl uppercase leading-[0.9] tracking-[0.04em] text-[#0b2538] md:text-8xl">
-              Teste, liberação e entrega operacional com leitura real de campo.
+              Teste, liberação e entrega operacional com leitura de campo.
             </h1>
             <p className="max-w-2xl text-lg leading-8 text-slate-600 md:text-xl">
-              A VOTH se posiciona como empresa de teste hidrostático e comissionamento, atuando em
-              sistemas industriais, adutoras, aquedutos, caixas d&apos;água, linhas de utilidades,
-              vasos sob requisitos de NR-13 e frentes que exigem liberação segura para operação.
+              A VOTH atua com teste hidrostático e comissionamento em sistemas industriais,
+              adutoras, aquedutos, caixas d&apos;água, linhas de utilidades e ativos sob requisitos de NR-13.
             </p>
           </div>
 
@@ -92,21 +91,21 @@ export default async function Home() {
               <p className="text-xs uppercase tracking-[0.26em] text-[#f2b705]">Especialidade</p>
               <p className="mt-3 font-display text-5xl uppercase">Teste</p>
               <p className="mt-3 text-sm leading-6 text-slate-300">
-                Pressurização, integridade, inspeção e entrega assistida para entrada em operação.
+                Pressurização, integridade, inspeção e entrega assistida.
               </p>
             </div>
             <div className="rounded-[1.5rem] border border-[#173349]/10 bg-white/85 p-5">
               <p className="text-xs uppercase tracking-[0.26em] text-slate-500">Segmentos</p>
               <p className="mt-3 font-display text-5xl uppercase text-[#0b2538]">NR13</p>
               <p className="mt-3 text-sm leading-6 text-slate-600">
-                Caldeiras, vasos, linhas pressurizadas, caixas d&apos;água e ativos que pedem critério técnico de liberação.
+                Caldeiras, vasos, linhas pressurizadas, caixas d&apos;água e ativos com critério técnico de liberação.
               </p>
             </div>
             <div className="rounded-[1.5rem] border border-[#173349]/10 bg-white/85 p-5">
               <p className="text-xs uppercase tracking-[0.26em] text-slate-500">Entrega</p>
               <p className="mt-3 font-display text-5xl uppercase text-[#0b2538]">Start</p>
               <p className="mt-3 text-sm leading-6 text-slate-600">
-                Comissionamento para liberar a atuação do sistema conforme o resultado esperado pelo cliente.
+                Comissionamento para liberar o sistema conforme o resultado esperado.
               </p>
             </div>
           </div>
@@ -171,9 +170,8 @@ export default async function Home() {
             </h2>
           </div>
           <p className="max-w-2xl text-sm leading-7 text-slate-600">
-            O conjunto de imagens sustenta a leitura técnica da empresa: execução, teste,
-            comissionamento e entrega de sistemas industriais com registro visual da frente em andamento,
-            inclusive em reservatórios e caixas d&apos;água.
+            As imagens sustentam a leitura técnica da empresa: execução, teste, comissionamento e
+            entrega de sistemas industriais, inclusive em reservatórios e caixas d&apos;água.
           </p>
         </div>
 
@@ -241,8 +239,8 @@ export default async function Home() {
               Janelas internas da entrega, do teste à liberação.
             </h2>
             <p className="mt-5 max-w-xl text-sm leading-7 text-slate-600">
-              A apresentação explica como a empresa lê o sistema, atua nas etapas internas da execução
-              e entrega o ativo em condição de operação.
+              A apresentação mostra como a empresa lê o sistema, atua nas etapas da execução e
+              entrega o ativo em condição de operação.
             </p>
           </div>
 
@@ -275,8 +273,8 @@ export default async function Home() {
             </div>
             <div className="max-w-xl space-y-5 text-sm leading-7 text-slate-300">
               <p>
-                A base pública apresenta a empresa como ela precisa ser lida: preparada para testar,
-                comissionar, ajustar e liberar sistemas industriais com rastreabilidade visual.
+                A base pública apresenta a empresa com clareza: preparada para testar, comissionar,
+                ajustar e liberar sistemas industriais com rastreabilidade visual.
               </p>
               <Link
                 href="/portfolio"

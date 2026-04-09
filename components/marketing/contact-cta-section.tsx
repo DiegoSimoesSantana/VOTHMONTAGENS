@@ -14,8 +14,8 @@ export function ContactCtaSection() {
             Fale com um engenheiro e apresente a demanda para análise técnica.
           </h2>
           <p className="mt-5 max-w-2xl text-sm leading-7 text-slate-600">
-            Este fechamento reúne especialidade, histórico de obras, normas atendidas e um canal direto
-            para continuar a conversa com contexto técnico.
+            Este fechamento reúne especialidades, histórico de obras, normas atendidas e um canal direto
+            para seguir a conversa com contexto técnico.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-3">
@@ -57,8 +57,8 @@ export function ContactCtaSection() {
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#f2b705]">Segurança e conformidade</p>
               <p className="mt-3 text-sm leading-7 text-slate-300">
-                A apresentação se encerra reforçando disciplina operacional, inspeção,
-                integridade, documentação e foco na liberação segura do sistema.
+                A apresentação se encerra com disciplina operacional, inspeção, integridade,
+                documentação e foco na liberação segura do sistema.
               </p>
             </div>
           </div>
@@ -80,8 +80,8 @@ export function ContactCtaSection() {
               <div>
                 <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#f2b705]">Síntese técnica</p>
                 <p className="mt-3 text-sm leading-7 text-slate-300">
-                  Atuamos com integridade, montagem, teste e comissionamento para indústrias que não
-                  podem operar com improviso. A página precisa comunicar isso com clareza.
+                  Atuamos com integridade, montagem, teste e comissionamento em indústrias que não
+                  podem operar com improviso.
                 </p>
               </div>
             </div>

@@ -29,10 +29,10 @@ export default async function PortfolioPage({
               Teste hidrostático, comissionamento e execução apresentados por evidência.
             </h1>
             <p className="max-w-3xl text-base leading-8 text-slate-600 md:text-lg">
-              Esta timeline organiza a atuação da VOTH a partir daquilo que mais importa para o
-              cliente: preparação do sistema, janelas internas da execução, teste, comissionamento
-              e liberação operacional com histórico visual. O foco vale para redes industriais,
-              adutoras, aquedutos, caixas d&apos;água e ativos sujeitos a requisitos técnicos críticos.
+              Esta timeline organiza a atuação da VOTH a partir do que mais importa para o cliente:
+              preparação do sistema, janelas internas da execução, teste, comissionamento e liberação
+              operacional. O foco vale para redes industriais, adutoras, aquedutos, caixas d&apos;água e
+              ativos sujeitos a requisitos técnicos críticos.
             </p>
           </div>
 
@@ -68,8 +68,8 @@ export default async function PortfolioPage({
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#f2b705]">Filtros de atuação</p>
               <p className="mt-2 max-w-2xl text-sm leading-7 text-slate-300">
-                Navegue por categoria para destacar a especialidade mais relevante para a proposta ou
-                para a apresentação técnica em andamento.
+                Navegue por categoria para destacar a especialidade mais relevante para a proposta
+                ou para a apresentação técnica em andamento.
               </p>
             </div>
             <TimelineFilters categoriaAtual={categoria} />
@@ -102,7 +102,7 @@ export default async function PortfolioPage({
         <div className="mt-6 rounded-[1.5rem] border border-[#173349]/10 bg-white/70 p-5 md:p-6">
           <p className="text-xs font-semibold uppercase tracking-[0.28em] text-slate-500">Leitura do comprador técnico</p>
           <p className="mt-2 max-w-2xl text-sm leading-7 text-slate-600">
-            O portfólio original funciona melhor quando responde com clareza o que foi montado ou ajustado,
+            O portfólio funciona melhor quando responde com clareza o que foi montado ou ajustado,
             como o sistema foi testado e de que forma a entrega foi liberada para operar.
           </p>
           <div className="mt-4 flex flex-wrap gap-2">

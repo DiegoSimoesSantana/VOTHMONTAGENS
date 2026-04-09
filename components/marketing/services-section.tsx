@@ -14,8 +14,8 @@ export function ServicesSection() {
             </h2>
           </div>
           <p className="max-w-2xl text-sm leading-7 text-slate-300">
-            Esta seção apresenta as disciplinas principais da VOTH para leitura rápida do escopo,
-            do tipo de ativo atendido e da capacidade operacional associada a cada frente.
+            Esta seção reúne as principais disciplinas da VOTH para leitura rápida do escopo,
+            do tipo de ativo e da capacidade operacional de cada frente.
           </p>
         </div>
 

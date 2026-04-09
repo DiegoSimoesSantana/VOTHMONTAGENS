@@ -127,8 +127,8 @@ export default async function ProjetoDetalhePage({
             <div className="rounded-[1.5rem] border border-[#173349]/10 bg-white/80 p-6">
               <p className="text-xs font-semibold uppercase tracking-[0.28em] text-slate-500">Leitura técnica</p>
               <p className="mt-3 text-sm leading-7 text-slate-600">
-                A base original desta página funciona melhor como estudo técnico curto: contexto,
-                resumo operacional e suporte visual suficiente para uma proposta ou visita técnica.
+                Esta página funciona melhor como estudo técnico curto: contexto, resumo operacional
+                e suporte visual suficiente para uma proposta ou visita técnica.
               </p>
               <div className="mt-4 flex flex-wrap gap-2">
                 {trustItems.map((item) => (
@@ -199,7 +199,7 @@ export default async function ProjetoDetalhePage({
         {[
           {
             title: "Antes do teste",
-            text: "Organize aqui o que foi construído, ajustado, soldado ou preparado para receber a etapa de validação.",
+            text: "Organize aqui o que foi construído, ajustado, soldado ou preparado para a etapa de validação.",
           },
           {
             title: "Durante o comissionamento",
