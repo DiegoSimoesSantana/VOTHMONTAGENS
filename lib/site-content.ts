@@ -5,7 +5,7 @@ export const services = [
   {
     title: "Montagem industrial e caldeiraria",
     description:
-      "Fabricação, montagem e adequação de tubulações, flanges, suportes, vasos e estruturas metálicas em campo.",
+      "Fabricação, montagem e adequação de tubulações, flanges, suportes, vasos e estruturas metálicas em campo industrial.",
     image:
       "https://images.unsplash.com/photo-1532619187608-e5375cab36aa?auto=format&fit=crop&w=1200&q=80",
     badge: "Montagem",
@@ -14,7 +14,7 @@ export const services = [
   {
     title: "Inspeção, END e NR-13",
     description:
-      "Leitura de integridade, inspeção em ativos pressurizados e suporte técnico para ambientes com requisitos críticos de segurança.",
+      "Leitura de integridade, inspeção em ativos pressurizados e suporte técnico para ambientes com requisitos críticos de segurança operacional.",
     image:
       "https://images.unsplash.com/photo-1581092919535-7146ff1a5908?auto=format&fit=crop&w=1200&q=80",
     badge: "Integridade",
@@ -23,7 +23,7 @@ export const services = [
   {
     title: "Teste hidrostático",
     description:
-      "Preparação da linha, pressurização, estabilização e validação da estanqueidade com abordagem de engenharia e rastreabilidade.",
+      "Preparação da linha, pressurização, estabilização e validação da estanqueidade com rastreabilidade de execução.",
     image:
       "https://images.unsplash.com/photo-1563453392212-326f5e854473?auto=format&fit=crop&w=1200&q=80",
     badge: "Testes",
@@ -32,7 +32,7 @@ export const services = [
   {
     title: "SPDA e aterramento industrial",
     description:
-      "Execução de malhas, descidas, interligações e pontos de aterramento para proteção de estruturas e ativos industriais.",
+      "Execução de malhas, descidas, interligações e pontos de aterramento para proteção de estruturas, utilidades e ativos industriais.",
     image:
       "https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1200&q=80",
     badge: "SPDA",
