@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f3f0e8;
+  --foreground: #132230;
+  --primary: #0b2538;
+  --accent: #f2b705;
+  --surface: #fbfaf6;
+  --muted: #5f6b75;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-body);
+  --font-mono: var(--font-mono);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background:
+    radial-gradient(circle at top left, rgba(242, 183, 5, 0.16), transparent 28%),
+    linear-gradient(180deg, #f8f5ee 0%, #eef2f3 100%);
+  color: var(--foreground);
+  font-family: var(--font-body), sans-serif;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(11, 37, 56, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(11, 37, 56, 0.03) 1px, transparent 1px);
+  background-size: 96px 96px;
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.4), transparent 85%);
+}
+
+::selection {
+  background: rgba(242, 183, 5, 0.3);
+}
+
+.font-display {
+  font-family: var(--font-display), var(--font-body), sans-serif;
+}
+
+.section-shell {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(11, 37, 56, 0.1);
+  background: rgba(251, 250, 246, 0.92);
+  box-shadow: 0 20px 60px rgba(11, 37, 56, 0.08);
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: #5f6b75;
+}
+
+.eyebrow::before {
+  content: "";
+  height: 1px;
+  width: 3rem;
+  background: rgba(11, 37, 56, 0.26);
+}
