@@ -34,19 +34,20 @@ export function TimelineList({ projetos }: { projetos: Projeto[] }) {
   }
 
   return (
-    <div className="relative space-y-6 before:absolute before:bottom-6 before:left-5 before:top-6 before:w-px before:bg-[#173349]/15 before:content-[''] md:before:left-[11.25rem]">
-      {projetos.map((projeto) => {
+    <div className="relative space-y-6 before:absolute before:bottom-6 before:left-5 before:top-6 before:w-px before:bg-[#173349]/15 before:content-[''] md:before:left-[11.25rem] xl:before:left-1/2">
+      {projetos.map((projeto, index) => {
         const fotoPrincipal = projeto.fotos[0];
+        const invertOnDesktop = index % 2 === 1;
 
         return (
           <Link
             key={projeto.id}
             href={`/portfolio/${projeto.slug}`}
-            className="group relative grid gap-4 rounded-[1.75rem] border border-[#173349]/10 bg-[rgba(251,250,246,0.96)] p-4 shadow-[0_18px_48px_rgba(11,37,56,0.08)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_24px_64px_rgba(11,37,56,0.16)] md:grid-cols-[180px_220px_1fr] md:p-5"
+            className={`group relative grid gap-4 rounded-[1.75rem] border border-[#173349]/10 bg-[rgba(251,250,246,0.96)] p-4 shadow-[0_18px_48px_rgba(11,37,56,0.08)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_24px_64px_rgba(11,37,56,0.16)] md:grid-cols-[180px_220px_1fr] md:p-5 ${invertOnDesktop ? "xl:grid-cols-[1fr_220px_180px]" : "xl:grid-cols-[180px_220px_1fr]"}`}
           >
-            <div className="absolute left-[0.95rem] top-10 h-4 w-4 rounded-full border-4 border-[#f3f0e8] bg-[#f2b705] md:left-[10.8rem]" />
+            <div className={`absolute left-[0.95rem] top-10 h-4 w-4 rounded-full border-4 border-[#f3f0e8] bg-[#f2b705] md:left-[10.8rem] ${invertOnDesktop ? "xl:left-[calc(100%-10.8rem)]" : "xl:left-[calc(50%-0.5rem)]"}`} />
 
-            <div className="flex flex-col justify-center gap-3 pl-6 md:pl-0">
+            <div className={`flex flex-col justify-center gap-3 pl-6 md:pl-0 ${invertOnDesktop ? "xl:order-3" : ""}`}>
               <p className="text-xs font-semibold uppercase tracking-[0.28em] text-slate-500">Registro técnico</p>
               <p className="font-display text-4xl uppercase leading-none text-[#0b2538] md:text-5xl">
                 {mesAno(projeto.dataExecucao)}
@@ -63,7 +64,7 @@ export function TimelineList({ projetos }: { projetos: Projeto[] }) {
               </div>
             </div>
 
-            <div className="relative min-h-[230px] overflow-hidden rounded-[1.25rem] bg-[#dbe2e7]">
+            <div className={`relative min-h-[230px] overflow-hidden rounded-[1.25rem] bg-[#dbe2e7] ${invertOnDesktop ? "xl:order-2" : ""}`}>
               {fotoPrincipal ? (
                 <Image src={fotoPrincipal} alt={projeto.titulo} fill className="object-cover transition duration-500 group-hover:scale-[1.04]" />
               ) : (
@@ -73,7 +74,7 @@ export function TimelineList({ projetos }: { projetos: Projeto[] }) {
               )}
             </div>
 
-            <div className="flex flex-col justify-between gap-5 p-2">
+            <div className={`flex flex-col justify-between gap-5 p-2 ${invertOnDesktop ? "xl:order-1" : ""}`}>
               <div className="space-y-3">
                 <Badge variant="accent" className="w-fit rounded-full px-3 py-1 text-[11px] uppercase tracking-[0.24em]">
                   {categoriaLabel(projeto.categoria)}
