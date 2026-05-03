@@ -1,9 +1,9 @@
 import { Suspense } from "react";
 import { FolderKanban, ImageIcon, ShieldCheck } from "lucide-react";
-import { listarProjetos } from "@/app/actions/projetos";
+import { listarClientesUnicos, listarProjetos } from "@/app/actions/projetos";
 import { TimelineFilters } from "@/components/portfolio/timeline-filters";
 import { TimelineList } from "@/components/portfolio/timeline-list";
-import { trustItems } from "@/lib/site-content";
+import { featuredVideos, trustItems } from "@/lib/site-content";
 
 export const dynamic = "force-dynamic";
 
@@ -18,8 +18,7 @@ export default async function PortfolioPage({
   searchParams: Promise<{ categoria?: string }>;
 }) {
   const { categoria } = await searchParams;
-  const todosProjetos = await listarProjetos();
-  const clientNames = [...new Set(todosProjetos.map((projeto) => projeto.cliente).filter((cliente) => cliente && cliente !== "Não informado"))].slice(0, 12);
+  const clientNames = await listarClientesUnicos(12);
 
   return (
     <main className="mx-auto min-h-screen w-full max-w-7xl px-6 py-10 md:py-14">
@@ -146,6 +145,36 @@ export default async function PortfolioPage({
           </div>
         </section>
       ) : null}
+
+      <section className="mt-8 rounded-[1.75rem] border border-[#173349]/10 bg-[rgba(251,250,246,0.96)] p-6 shadow-[0_14px_36px_rgba(11,37,56,0.08)] md:p-8">
+        <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.28em] text-slate-500">Evidência em vídeo</p>
+            <h2 className="title-balance mt-3 max-w-3xl font-display text-4xl uppercase leading-[0.92] text-[#0b2538] md:text-5xl">
+              Registro operacional em movimento para leitura técnica rápida.
+            </h2>
+          </div>
+          <p className="max-w-2xl text-sm leading-7 text-slate-600">
+            Este bloco acelera avaliação B2B ao mostrar escala de campo, contexto de execução e padrão operacional antes da proposta.
+          </p>
+        </div>
+
+        <div className="mt-6 grid gap-5 md:grid-cols-2">
+          {featuredVideos.map((item) => (
+            <article key={item.src} className="overflow-hidden rounded-[1.25rem] border border-[#173349]/10 bg-[#081723]">
+              <video className="h-64 w-full object-cover md:h-80" controls playsInline preload="metadata" poster={item.poster}>
+                <source src={item.src} type="video/mp4" />
+                Seu navegador não suporta reprodução de vídeo.
+              </video>
+              <div className="space-y-3 bg-[#0b2538] p-5 text-[#f3f0e8]">
+                <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#f2b705]">{item.label}</p>
+                <h3 className="title-balance font-display text-3xl uppercase leading-[0.92]">{item.title}</h3>
+                <p className="text-sm leading-7 text-slate-300">{item.text}</p>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
 
       <section className="mt-8">
         <Suspense fallback={<p className="text-slate-600">Carregando projetos...</p>}>

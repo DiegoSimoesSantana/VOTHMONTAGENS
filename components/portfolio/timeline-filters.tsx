@@ -1,20 +1,12 @@
 import Link from "next/link";
 import { buttonVariants } from "@/components/ui/button";
+import { PROJECT_CATEGORY_FILTERS } from "@/constants/categories";
 import { cn } from "@/lib/utils";
-
-const filtros = [
-  { label: "Todos", value: "" },
-  { label: "Teste Hidrostático", value: "teste-hidrostatico" },
-  { label: "Montagem", value: "montagem" },
-  { label: "Manutenção", value: "manutencao" },
-  { label: "Inspeção", value: "inspecao" },
-  { label: "SPDA", value: "spda" },
-];
 
 export function TimelineFilters({ categoriaAtual }: { categoriaAtual?: string }) {
   return (
     <div className="flex flex-wrap gap-2">
-      {filtros.map((filtro) => {
+      {PROJECT_CATEGORY_FILTERS.map((filtro) => {
         const ativo = (categoriaAtual || "") === filtro.value;
         const href = filtro.value ? `/portfolio?categoria=${filtro.value}` : "/portfolio";
 

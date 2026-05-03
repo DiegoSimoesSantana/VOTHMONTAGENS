@@ -29,6 +29,11 @@ export const metadata: Metadata = {
   },
   description:
     "Portfólio técnico da VOTH com foco em montagem industrial, tubulação, manutenção em campo e execução com evidência fotográfica.",
+  icons: {
+    icon: "/icon",
+    shortcut: "/icon",
+    apple: "/apple-icon",
+  },
 };
 
 export default function RootLayout({

@@ -8,6 +8,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
+import { PROJECT_CATEGORY_FILTERS } from "@/constants/categories";
 import { authOptions } from "@/lib/auth";
 
 export default async function NovoProjetoPage() {
@@ -112,11 +113,11 @@ export default async function NovoProjetoPage() {
                     defaultValue="teste-hidrostatico"
                     className="h-12 w-full rounded-xl border border-[#173349]/15 bg-white/80 px-4 text-sm text-slate-900 outline-none focus-visible:ring-2 focus-visible:ring-[#0b2538]"
                   >
-                    <option value="montagem">Montagem</option>
-                    <option value="manutencao">Manutenção</option>
-                    <option value="inspecao">Inspeção</option>
-                    <option value="teste-hidrostatico">Teste Hidrostático</option>
-                    <option value="spda">SPDA</option>
+                    {PROJECT_CATEGORY_FILTERS.filter((item) => item.value).map((item) => (
+                      <option key={item.value} value={item.value}>
+                        {item.label}
+                      </option>
+                    ))}
                   </select>
                 </div>
                 <div className="space-y-2 md:col-span-2">

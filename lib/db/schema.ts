@@ -1,13 +1,8 @@
 import { sql } from "drizzle-orm";
 import { date, jsonb, pgEnum, pgTable, serial, text, timestamp } from "drizzle-orm/pg-core";
+import { PROJECT_CATEGORIES } from "@/constants/categories";
 
-export const categoriaProjetoEnum = pgEnum("categoria_projeto", [
-  "montagem",
-  "manutencao",
-  "inspecao",
-  "teste-hidrostatico",
-  "spda",
-]);
+export const categoriaProjetoEnum = pgEnum("categoria_projeto", PROJECT_CATEGORIES);
 
 export const projetos = pgTable("projetos", {
   id: serial("id").primaryKey(),

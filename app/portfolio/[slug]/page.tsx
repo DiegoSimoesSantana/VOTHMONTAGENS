@@ -5,21 +5,17 @@ import { ArrowLeft, CalendarDays, Images, MapPin } from "lucide-react";
 import { buscarProjetoPorSlug } from "@/app/actions/projetos";
 import { ProjectCarousel } from "@/components/portfolio/project-carousel";
 import { Badge } from "@/components/ui/badge";
+import { PROJECT_CATEGORY_LABELS, type ProjectCategory } from "@/constants/categories";
 import { getDb, hasDatabaseConfig } from "@/lib/db";
 import { projetos } from "@/lib/db/schema";
 import { processImageMap, trustItems } from "@/lib/site-content";
 import { mesAno } from "@/lib/utils";
 
 function categoriaLabel(categoria: string) {
-  const mapa: Record<string, string> = {
-    montagem: "Montagem",
-    manutencao: "Manutenção",
-    inspecao: "Inspeção",
-    "teste-hidrostatico": "Teste Hidrostático",
-    spda: "SPDA",
-  };
-
-  return mapa[categoria] || categoria;
+  if (categoria in PROJECT_CATEGORY_LABELS) {
+    return PROJECT_CATEGORY_LABELS[categoria as ProjectCategory];
+  }
+  return categoria;
 }
 
 function frentesDoProjeto(categoria: string) {
@@ -167,9 +163,11 @@ export default async function ProjetoDetalhePage({
               <Image
                 src={item.image}
                 alt={`${categoriaLabel(projeto.categoria)} ${item.title}`}
-                fill
+                width={1200}
+                height={900}
+                priority={index === 0}
                 sizes="(min-width: 768px) 50vw, 100vw"
-                className="object-cover"
+                className="h-full w-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#07131d]/75 via-[#07131d]/10 to-transparent" />
               <div className="absolute inset-x-0 bottom-0 p-5 text-[#f3f0e8]">

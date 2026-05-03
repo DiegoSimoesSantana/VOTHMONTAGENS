@@ -22,10 +22,12 @@ export default function LoginPage() {
     const formData = new FormData(event.currentTarget);
     const email = String(formData.get("email") || "");
     const password = String(formData.get("password") || "");
+    const otp = String(formData.get("otp") || "").trim();
 
     const result = await signIn("credentials", {
       email,
       password,
+      otp,
       redirect: false,
     });
 
@@ -95,6 +97,19 @@ export default function LoginPage() {
               <div className="space-y-2">
                 <Label htmlFor="password">Senha</Label>
                 <Input id="password" name="password" type="password" required className="h-12 rounded-xl border-[#173349]/15 bg-white/80" />
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="otp">Código 2FA</Label>
+                <Input
+                  id="otp"
+                  name="otp"
+                  inputMode="numeric"
+                  pattern="[0-9]{6}"
+                  maxLength={6}
+                  placeholder="000000"
+                  required
+                  className="h-12 rounded-xl border-[#173349]/15 bg-white/80"
+                />
               </div>
               {erro ? <p className="text-sm text-red-600">{erro}</p> : null}
               <Button type="submit" className="h-12 w-full rounded-full" variant="accent" disabled={loading}>

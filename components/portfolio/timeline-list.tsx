@@ -2,19 +2,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight, Building2, MapPin } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import { PROJECT_CATEGORY_LABELS } from "@/constants/categories";
 import type { Projeto } from "@/lib/db/schema";
 import { mesAno } from "@/lib/utils";
 
 function categoriaLabel(categoria: Projeto["categoria"]) {
-  const mapa: Record<Projeto["categoria"], string> = {
-    montagem: "Montagem",
-    manutencao: "Manutenção",
-    inspecao: "Inspeção",
-    "teste-hidrostatico": "Teste Hidrostático",
-    spda: "SPDA",
-  };
-
-  return mapa[categoria];
+  return PROJECT_CATEGORY_LABELS[categoria];
 }
 
 export function TimelineList({ projetos }: { projetos: Projeto[] }) {
@@ -66,7 +59,14 @@ export function TimelineList({ projetos }: { projetos: Projeto[] }) {
 
             <div className={`relative min-h-[230px] overflow-hidden rounded-[1.25rem] bg-[#dbe2e7] ${invertOnDesktop ? "xl:order-2" : ""}`}>
               {fotoPrincipal ? (
-                <Image src={fotoPrincipal} alt={projeto.titulo} fill className="object-cover transition duration-500 group-hover:scale-[1.04]" />
+                <Image
+                  src={fotoPrincipal}
+                  alt={projeto.titulo}
+                  width={1200}
+                  height={800}
+                  sizes="(min-width: 1280px) 33vw, (min-width: 768px) 40vw, 100vw"
+                  className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.04]"
+                />
               ) : (
                 <div className="flex h-full items-end bg-[linear-gradient(160deg,#0b2538_0%,#24445d_55%,#f2b705_185%)] p-5 text-[#f3f0e8]">
                   <p className="font-display text-3xl uppercase leading-none">Evidência fotográfica em atualização</p>

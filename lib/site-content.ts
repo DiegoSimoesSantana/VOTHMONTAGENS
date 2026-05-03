@@ -1,13 +1,32 @@
 export const whatsappHref = "https://wa.me/5527997559365?text=Ol%C3%A1%2C%20quero%20falar%20com%20um%20engenheiro%20da%20VOTH%20sobre%20uma%20demanda%20industrial.";
 export const commercialEmail = "gilberto.visentin@vothmontagem.com.br";
 
+function mediaPath(fileName: string) {
+  return `/img/${encodeURIComponent(fileName)}`;
+}
+
+const localMedia = {
+  tanque: mediaPath("18231dff-77f5-4ee0-9730-db9f18c2c7e5.jpeg"),
+  estrutura: mediaPath("b0a80149-7e7c-438c-9637-2af32e34b0e1.jpeg"),
+  montagem: mediaPath("bf90a74a-4abc-4d3c-98ac-ae71a1fd3279.jpeg"),
+  reservatorio: mediaPath("e12cb1cc-7624-44f9-a3d3-23d950bc6cfc.jpeg"),
+  tubulacao: mediaPath("ee855fff-fd20-4e18-8762-0ba66c80da14.jpeg"),
+  campo1: mediaPath("WhatsApp Image 2026-02-28 at 11.56.07.jpeg"),
+  campo2: mediaPath("WhatsApp Image 2026-02-28 at 11.56.08.jpeg"),
+  campo3: mediaPath("WhatsApp Image 2026-02-28 at 11.56.08 (1).jpeg"),
+  campo4: mediaPath("WhatsApp Image 2026-02-28 at 11.56.08 (2).jpeg"),
+  campo5: mediaPath("WhatsApp Image 2026-02-28 at 11.56.09.jpeg"),
+  campo6: mediaPath("WhatsApp Image 2026-02-28 at 11.56.09 (1).jpeg"),
+  videoMontagem: mediaPath("WhatsApp Video 2026-03-02 at 15.32.12.mp4"),
+  videoCampo: mediaPath("WhatsApp Video 2026-02-28 at 11.37.21.mp4"),
+} as const;
+
 export const services = [
   {
     title: "Montagem industrial e caldeiraria",
     description:
       "Fabricação, montagem e adequação de tubulações, flanges, suportes, vasos e estruturas metálicas em campo.",
-    image:
-      "https://images.unsplash.com/photo-1532619187608-e5375cab36aa?auto=format&fit=crop&w=1200&q=80",
+    image: localMedia.montagem,
     badge: "Montagem",
     href: "/portfolio?categoria=montagem",
   },
@@ -15,8 +34,7 @@ export const services = [
     title: "Inspeção, END e NR-13",
     description:
       "Leitura de integridade, inspeção em ativos pressurizados e suporte técnico em ambientes de segurança crítica.",
-    image:
-      "https://images.unsplash.com/photo-1581092919535-7146ff1a5908?auto=format&fit=crop&w=1200&q=80",
+    image: localMedia.reservatorio,
     badge: "Integridade",
     href: "/portfolio?categoria=inspecao",
   },
@@ -24,8 +42,7 @@ export const services = [
     title: "Teste hidrostático",
     description:
       "Preparação da linha, pressurização, estabilização e validação da estanqueidade com rastreabilidade.",
-    image:
-      "https://images.unsplash.com/photo-1563453392212-326f5e854473?auto=format&fit=crop&w=1200&q=80",
+    image: localMedia.tubulacao,
     badge: "Testes",
     href: "/portfolio?categoria=teste-hidrostatico",
   },
@@ -33,8 +50,7 @@ export const services = [
     title: "SPDA e aterramento industrial",
     description:
       "Execução de malhas, descidas, interligações e pontos de aterramento para proteção de estruturas e ativos industriais.",
-    image:
-      "https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1200&q=80",
+    image: localMedia.estrutura,
     badge: "SPDA",
     href: "/portfolio?categoria=spda",
   },
@@ -45,22 +61,36 @@ export const fallbackGallery = [
     title: "Montagem de tanques e linhas auxiliares",
     label: "Portfólio de campo",
     text: "Implantação de reservatórios, guarda-corpo, acessos, interligações e preparação para teste e entrega.",
-    image:
-      "https://images.unsplash.com/photo-1517581177682-a085bb7ffb15?auto=format&fit=crop&w=1200&q=80",
+    image: localMedia.tanque,
   },
   {
     title: "Inspeção, teste e comissionamento",
     label: "Referência técnica",
     text: "Projetos conduzidos com leitura visual da obra, critério de integridade e validação operacional clara.",
-    image:
-      "https://images.unsplash.com/photo-1581092335397-9583eb92d232?auto=format&fit=crop&w=1200&q=80",
+    image: localMedia.campo5,
   },
   {
     title: "Adutoras, aquedutos e infraestrutura",
     label: "Rede industrial",
     text: "Frentes com adequações, travessias, soldagem e organização do sistema para continuidade operacional.",
-    image:
-      "https://images.unsplash.com/photo-1509395176047-4a66953fd231?auto=format&fit=crop&w=1200&q=80",
+    image: localMedia.campo2,
+  },
+] as const;
+
+export const featuredVideos = [
+  {
+    title: "Registro de montagem em campo",
+    label: "Video real da operacao",
+    text: "Movimentacao e leitura visual da frente executada pela VOTH em ambiente industrial real.",
+    src: localMedia.videoMontagem,
+    poster: localMedia.campo6,
+  },
+  {
+    title: "Detalhe operacional da execucao",
+    label: "Video real da obra",
+    text: "Tomada curta para reforcar escala, contexto fisico da frente e evidencia da entrega em campo.",
+    src: localMedia.videoCampo,
+    poster: localMedia.campo3,
   },
 ] as const;
 
@@ -101,13 +131,13 @@ export const socialLogos = ["NR-13", "END", "Caldeiraria", "Tubulação", "Comis
 export const processImageMap = {
   montagem: [
     {
-      image: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1200&q=80",
+      image: localMedia.montagem,
       label: "Etapa interna",
       title: "Preparação e montagem",
       text: "Leitura da frente, montagem de linhas, suportes e interfaces antes da validação final.",
     },
     {
-      image: "https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1200&q=80",
+      image: localMedia.tanque,
       label: "Etapa interna",
       title: "Ajuste e entrega",
       text: "Organização do conjunto, acabamento e prontidão para inspeção ou operação assistida.",
@@ -115,13 +145,13 @@ export const processImageMap = {
   ],
   manutencao: [
     {
-      image: "https://images.unsplash.com/photo-1581092583537-20d51b4b4f1b?auto=format&fit=crop&w=1200&q=80",
+      image: localMedia.campo1,
       label: "Etapa interna",
       title: "Intervenção técnica",
       text: "Correções, recomposição de trechos críticos e controle do retorno operacional da frente.",
     },
     {
-      image: "https://images.unsplash.com/photo-1581092918484-8313b7d0b6f8?auto=format&fit=crop&w=1200&q=80",
+      image: localMedia.campo4,
       label: "Etapa interna",
       title: "Verificação final",
       text: "Checagens de integridade e fechamento da intervenção com registro da condição entregue.",
@@ -129,13 +159,13 @@ export const processImageMap = {
   ],
   inspecao: [
     {
-      image: "https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0?auto=format&fit=crop&w=1200&q=80",
+      image: localMedia.reservatorio,
       label: "Etapa interna",
       title: "Levantamento e acesso",
       text: "Mapeamento visual do ativo, pontos de atenção e condições para decisão técnica.",
     },
     {
-      image: "https://images.unsplash.com/photo-1581092919535-7146ff1a5908?auto=format&fit=crop&w=1200&q=80",
+      image: localMedia.campo5,
       label: "Etapa interna",
       title: "Registro e parecer",
       text: "Consolidação da inspeção com evidência visual e leitura de integridade para o próximo passo.",
@@ -143,13 +173,13 @@ export const processImageMap = {
   ],
   "teste-hidrostatico": [
     {
-      image: "https://images.unsplash.com/photo-1563453392212-326f5e854473?auto=format&fit=crop&w=1200&q=80",
+      image: localMedia.tubulacao,
       label: "Etapa interna",
       title: "Preparação e pressurização",
       text: "Isolamento de trechos, preparação da linha e início da validação de estanqueidade.",
     },
     {
-      image: "https://images.unsplash.com/photo-1513828583688-c52646db42da?auto=format&fit=crop&w=1200&q=80",
+      image: localMedia.campo2,
       label: "Etapa interna",
       title: "Estabilização e liberação",
       text: "Acompanhamento do comportamento da rede, estabilização e registro da condição liberada.",
@@ -157,13 +187,13 @@ export const processImageMap = {
   ],
   spda: [
     {
-      image: "https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?auto=format&fit=crop&w=1200&q=80",
+      image: localMedia.estrutura,
       label: "Etapa interna",
       title: "Malha e interligações",
       text: "Execução de descidas, conexões e distribuição dos pontos de proteção do sistema.",
     },
     {
-      image: "https://images.unsplash.com/photo-1509395176047-4a66953fd231?auto=format&fit=crop&w=1200&q=80",
+      image: localMedia.campo3,
       label: "Etapa interna",
       title: "Continuidade e conformidade",
       text: "Verificação final do aterramento, continuidade e prontidão para inspeção e uso.",

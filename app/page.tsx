@@ -1,13 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Factory, ShieldCheck, Wrench, Workflow } from "lucide-react";
+import { ArrowRight, Factory, ShieldCheck, Workflow } from "lucide-react";
 import { listarProjetos } from "@/app/actions/projetos";
 import { ContactCtaSection } from "@/components/marketing/contact-cta-section";
 import { ServicesSection } from "@/components/marketing/services-section";
 import { SocialProofSection } from "@/components/marketing/social-proof-section";
 import { Badge } from "@/components/ui/badge";
 import { buttonVariants } from "@/components/ui/button";
-import { fallbackGallery, whatsappHref } from "@/lib/site-content";
+import { fallbackGallery, featuredVideos, whatsappHref } from "@/lib/site-content";
 import { cn, mesAno } from "@/lib/utils";
 
 const capabilityCards = [
@@ -189,8 +189,11 @@ export default async function Home() {
                       <Image
                         src={projeto.fotos[0]}
                         alt={projeto.titulo}
-                        fill
-                        className="object-cover transition duration-500 group-hover:scale-[1.03]"
+                        width={1200}
+                        height={900}
+                        priority
+                        sizes="(min-width: 768px) 33vw, 100vw"
+                        className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.03]"
                       />
                     ) : null}
                   </div>
@@ -213,9 +216,10 @@ export default async function Home() {
                     <Image
                       src={item.image}
                       alt={item.title}
-                      fill
+                      width={1200}
+                      height={900}
                       sizes="(min-width: 768px) 33vw, 100vw"
-                      className="object-cover"
+                      className="h-full w-full object-cover"
                     />
                     <div className="absolute inset-0 flex items-end bg-gradient-to-t from-[#07131d] via-[#07131d]/20 to-transparent p-6 text-[#f3f0e8]">
                       <div>
@@ -229,6 +233,47 @@ export default async function Home() {
                   <p className="mt-4 px-2 text-sm leading-7 text-slate-600">{item.text}</p>
                 </article>
               ))}
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-6 pb-16">
+        <div className="mb-8 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+          <div>
+            <span className="eyebrow">Registros em video</span>
+            <h2 className="title-balance mt-4 max-w-[13ch] font-display text-4xl uppercase leading-[0.92] text-[#0b2538] sm:text-5xl md:text-6xl">
+              Evidencia real da frente, com movimento e escala de campo.
+            </h2>
+          </div>
+          <p className="max-w-2xl text-sm leading-7 text-slate-600">
+            Os videos reforcam escala de campo, contexto operacional e padrao de execucao para uma leitura tecnica mais rapida.
+          </p>
+        </div>
+
+        <div className="grid gap-5 md:grid-cols-2">
+          {featuredVideos.map((item) => (
+            <article key={item.src} className="section-shell rounded-[1.75rem] p-4">
+              <div className="relative overflow-hidden rounded-[1.25rem] bg-[#081723]">
+                <video
+                  className="h-[300px] w-full object-cover sm:h-[360px] md:h-[420px]"
+                  controls
+                  playsInline
+                  preload="metadata"
+                  poster={item.poster}
+                >
+                  <source src={item.src} type="video/mp4" />
+                  Seu navegador não suporta reprodução de video.
+                </video>
+              </div>
+
+              <div className="mt-4 space-y-3 px-2 pb-2">
+                <p className="text-xs font-semibold uppercase tracking-[0.28em] text-slate-500">{item.label}</p>
+                <h3 className="title-balance font-display text-4xl uppercase leading-[0.92] text-[#0b2538]">
+                  {item.title}
+                </h3>
+                <p className="text-sm leading-7 text-slate-600">{item.text}</p>
+              </div>
+            </article>
+          ))}
         </div>
       </section>
 

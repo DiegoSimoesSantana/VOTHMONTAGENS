@@ -20,7 +20,7 @@ export function ServicesSection() {
         </div>
 
         <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-          {services.map((service) => (
+          {services.map((service, index) => (
             <Link
               key={service.title}
               href={service.href}
@@ -31,6 +31,7 @@ export function ServicesSection() {
                   src={service.image}
                   alt={service.title}
                   fill
+                  priority={index === 0}
                   sizes="(min-width: 1280px) 25vw, (min-width: 768px) 50vw, 100vw"
                   className="object-cover brightness-75 transition-all duration-300 group-hover:brightness-95"
                 />

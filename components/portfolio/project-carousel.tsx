@@ -43,7 +43,15 @@ export function ProjectCarousel({ fotos, titulo }: { fotos: string[]; titulo: st
           {fotos.map((url, index) => (
             <div key={`${url}-${index}`} className="relative min-w-0 flex-[0_0_100%]">
               <div className="relative h-[360px] w-full bg-slate-100 md:h-[560px]">
-                <Image src={url} alt={`${titulo} ${index + 1}`} fill className="object-cover" />
+                <Image
+                  src={url}
+                  alt={`${titulo} ${index + 1}`}
+                  width={1600}
+                  height={1000}
+                  priority={index === 0}
+                  sizes="(min-width: 768px) 1100px, 100vw"
+                  className="h-full w-full object-cover"
+                />
                 <div className="absolute inset-x-0 bottom-0 flex items-center justify-between bg-gradient-to-t from-black/55 to-transparent px-5 py-5 text-white">
                   <p className="text-xs font-semibold uppercase tracking-[0.28em]">Registro {String(index + 1).padStart(2, "0")}</p>
                   <p className="text-xs font-semibold uppercase tracking-[0.28em]">{fotos.length} imagens</p>
@@ -68,7 +76,14 @@ export function ProjectCarousel({ fotos, titulo }: { fotos: string[]; titulo: st
               }`}
             >
               <div className="relative h-24 w-full bg-slate-100">
-                <Image src={url} alt={`${titulo} miniatura ${index + 1}`} fill className="object-cover" />
+                <Image
+                  src={url}
+                  alt={`${titulo} miniatura ${index + 1}`}
+                  width={320}
+                  height={192}
+                  sizes="(min-width: 768px) 20vw, 50vw"
+                  className="h-full w-full object-cover"
+                />
               </div>
             </button>
           ))}
